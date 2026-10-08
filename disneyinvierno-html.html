@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Winter at Main Street USA - VR Experience</title>
+    <!-- Librería A-Frame para VR -->
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=vHav8RfnUeMOpCZRnjkiZ2YdYWIwhgzw1FMqxJDUL_leJ5AYKx7sz13nGVugEt4xoFM6bNvWIS_l0342xk5jpXFGmrfv8QgYeRTOfuOJtfbb0TpZb5LOANTnt7M-m48VzD1-Ar2cp4tMZ544lbKALW3GibMCx1tBckUrhzitBfs" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://gc.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9zMTQzLmNvbnZlcnRpby5tZS9wL2lOdHRBRzZIeXpRMWo3N0kyMFl5R0EvMzExZDI4MzRlMmJhZDBlOGU4OWRlYTFiYzY3NGJhYjkvZGlzbmV5aW52aWVybm8taHRtbC5odG1s"/><script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- 1. Fondo Panorama 360° de Main Street / Entorno Nevado -->
+      <a-sky src="https://raw.githubusercontent.com/aframevr/aframe/master/examples/boilerplate/360-image/puydesancy.jpg" rotation="0 -130 0"></a-sky>
+
+      <!-- 2. Suelo cubierto de nieve blanca -->
+      <a-plane position="0 0 0" rotation="-90 0 0" width="100" height="100" color="#FFFFFF" roughness="0.8"></a-plane>
+
+      <!-- 3. Castillo / Estructura congelada al fondo -->
+      <a-cylinder position="0 4 -15" radius="2" height="8" color="#A0C4FF"></a-cylinder>
+      <a-cone position="0 9 -15" radius="2.2" height="3" color="#D8E2DC"></a-cone>
+
+      <!-- 4. Letrero de Bienvenida en Inglés sobre Main Street -->
+      <a-text 
+        value="Welcome to Main Street, U.S.A.\n-- Snowy Winter Edition --" 
+        position="0 3.5 -5" 
+        color="#002855" 
+        align="center"
+        scale="1.8 1.8 1.8">
+      </a-text>
+
+      <!-- 5. Tarjeta de vocabulario/actividad en inglés para la clase -->
+      <a-plane position="-3 2 -4" width="2.5" height="1.5" color="#1D3557" opacity="0.85"></a-plane>
+      <a-text 
+        value="Winter Vocabulary:\n1. Freezing (-5 deg C)\n2. Heavy Snowfall\n3. Icy Castle" 
+        position="-3 2 -3.9" 
+        color="#F1FAEE" 
+        align="center"
+        scale="0.8 0.8 0.8">
+      </a-text>
+
+      <!-- 6. Muñeco de nieve interactivo cerca del usuario -->
+      <a-sphere position="3 0.6 -4" radius="0.6" color="#FFFFFF"></a-sphere>
+      <a-sphere position="3 1.4 -4" radius="0.4" color="#FFFFFF"></a-sphere>
+      <a-sphere position="3 2.0 -4" radius="0.25" color="#FFFFFF"></a-sphere>
+      <!-- Nariz de zanahoria -->
+      <a-cone position="3 2.0 -3.7" rotation="90 0 0" radius="0.05" height="0.3" color="#FF7B00"></a-cone>
+
+      <!-- 7. Cámara con retícula/cursor para mirar desde Google Cardboard -->
+      <a-camera>
+        <a-cursor color="#A0C4FF"></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
